@@ -1,0 +1,76 @@
+@import url(https://fonts.googleapis.com/css2?family=Playfair+Display:wght@100;200;300;400;500;600;800;900&display=swap);
+
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+.side-menu-container {
+    position: relative;
+}
+
+.menu-button {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    width: 25px;
+    height: 100vh;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    text-align: center;
+    background-color: #808080;
+    color: white;
+    padding: 10px 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #808080;
+    overflow-y: auto;
+    transition: left 0.3s ease-in-out;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+}
+
+.side-menu ul li {
+    position: relative;
+    margin: 15px 0;
+    padding-left: 30px; 
+}
+
+.side-menu ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg); 
+    width: 10px; 
+    height: 10px; 
+    background-color: #E59502; 
+    border: 2px solid black; 
+}
+
+.side-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.side-menu ul li a:hover {
+    color: #E59502;
+}
+
+.side-menu-container:hover .side-menu {
+    left: 0;
+}
